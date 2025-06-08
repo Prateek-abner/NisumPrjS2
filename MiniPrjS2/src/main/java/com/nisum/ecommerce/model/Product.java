@@ -11,10 +11,10 @@ public class Product {
     private double discountPrice;
     private int discount;
 
-    // Default constructor
+    
     public Product() {}
 
-    // Constructor with basic fields
+    
     public Product(int productId, String productName, String categoryName, String imagePath) {
         this.productId = productId;
         this.productName = productName;
@@ -22,7 +22,7 @@ public class Product {
         this.imagePath = imagePath;
     }
 
-    // Getters and Setters
+    
     public int getProductId() { return productId; }
     public void setProductId(int productId) { this.productId = productId; }
 
