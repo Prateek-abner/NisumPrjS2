@@ -31,7 +31,7 @@ public class CartService {
 
             Cart cart = getCart(session);
 
-            // Check if item already exists in cart
+            
             CartItem existingItem = cart.getItems().stream()
                     .filter(item -> item.getProductId() == productId && item.getSize().equals(size))
                     .findFirst()
