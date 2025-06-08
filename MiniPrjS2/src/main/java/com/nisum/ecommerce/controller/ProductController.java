@@ -37,11 +37,11 @@ public class ProductController {
     @GetMapping("/detail/{productId}")
     public String productDetail(@PathVariable String productId, Model model) {
         try {
-            // Handle both P401 format and simple number format
+            
             int id;
             if (productId.startsWith("P")) {
-                // Extract number from P401 -> get the first digit after P
-                String numPart = productId.substring(1, 2); // Get just the first digit
+            
+                String numPart = productId.substring(1, 2);
                 id = Integer.parseInt(numPart);
             } else {
                 id = Integer.parseInt(productId);
@@ -50,7 +50,7 @@ public class ProductController {
             model.addAttribute("product", productDAO.getProductById(id));
             return "product-detail";
         } catch (Exception e) {
-            // If parsing fails, redirect to browse page
+        
             return "redirect:/browse";
         }
     }
