@@ -96,7 +96,7 @@ public class ProductDAO {
         }
     }
 
-    // Helper method to map ResultSet to Product with image fallback
+    
     private Product mapRowToProduct(ResultSet rs, int rowNum) throws SQLException {
         Product product = new Product();
         product.setProductId(rs.getInt("ProductID"));
@@ -104,7 +104,7 @@ public class ProductDAO {
         product.setCategoryId(rs.getInt("CategoryID"));
         product.setStatus(rs.getString("Status"));
 
-        // Handle image path with fallback to placeholder
+        
         String imagePath = rs.getString("ImagePath");
         if (imagePath == null || imagePath.trim().isEmpty()) {
             product.setImagePath("images/placeholder.jpg");
