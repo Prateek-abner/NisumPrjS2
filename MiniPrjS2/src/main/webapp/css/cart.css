@@ -1,4 +1,4 @@
-/* Cart specific styles */
+
 .cart-header {
     background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
     color: white;
@@ -252,7 +252,7 @@
     border-left: 4px solid #27ae60;
 }
 
-/* Responsive design for cart */
+
 @media (max-width: 768px) {
     .cart-content {
         grid-template-columns: 1fr;
