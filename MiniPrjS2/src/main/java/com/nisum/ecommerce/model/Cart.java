@@ -16,7 +16,7 @@ public class Cart {
         this.items = new ArrayList<>();
     }
 
-    // Calculate all totals and discounts
+    
     public void calculateTotals() {
         subtotal = 0;
         totalDiscount = 0;
@@ -28,39 +28,39 @@ public class Cart {
             totalItems += item.getQuantity();
         }
 
-        // Calculate combo discounts
+        
         comboDiscount = calculateComboDiscount();
 
-        // Calculate bulk discounts
+        
         bulkDiscount = calculateBulkDiscount();
 
-        // Final total calculation
+        
         finalTotal = subtotal - totalDiscount - comboDiscount - bulkDiscount;
         if (finalTotal < 0) finalTotal = 0;
     }
 
-    // Combo discount logic (e.g., shirt + jacket = extra 10% off)
+    
     private double calculateComboDiscount() {
         boolean hasShirt = items.stream().anyMatch(item -> item.getProductName().toLowerCase().contains("shirt"));
         boolean hasJacket = items.stream().anyMatch(item -> item.getProductName().toLowerCase().contains("jacket"));
 
         if (hasShirt && hasJacket) {
-            return (subtotal - totalDiscount) * 0.10; // 10% combo discount
+            return (subtotal - totalDiscount) * 0.10; 
         }
         return 0;
     }
 
-    // Bulk discount logic (e.g., buy 2+ items get 5% off, 3+ items get 8% off)
+
     private double calculateBulkDiscount() {
         if (totalItems >= 3) {
-            return (subtotal - totalDiscount) * 0.08; // 8% for 3+ items
+            return (subtotal - totalDiscount) * 0.08; 
         } else if (totalItems >= 2) {
-            return (subtotal - totalDiscount) * 0.05; // 5% for 2+ items
+            return (subtotal - totalDiscount) * 0.05; 
         }
         return 0;
     }
 
-    // Getters and Setters
+    
     public List<CartItem> getItems() { return items; }
     public void setItems(List<CartItem> items) { this.items = items; }
 
