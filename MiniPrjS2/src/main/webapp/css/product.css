@@ -1,4 +1,4 @@
-/* Modern FashionHub Styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     padding: 0 20px;
 }
 
-/* Modern Header */
+
 .modern-header {
     background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
     color: white;
@@ -62,7 +62,7 @@ body {
     right: -8px;
 }
 
-/* Search Container */
+
 .search-container {
     background: white;
     padding: 2rem;
@@ -113,7 +113,7 @@ body {
     box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
 }
 
-/* Modern Products Grid */
+
 .modern-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -224,7 +224,7 @@ body {
     box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
 }
 
-/* Product Detail Styles */
+
 .product-header {
     background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
     color: white;
@@ -477,7 +477,7 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .product-detail-layout {
         grid-template-columns: 1fr;
