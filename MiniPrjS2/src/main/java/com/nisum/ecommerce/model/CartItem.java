@@ -11,7 +11,7 @@ public class CartItem {
     private double totalPrice;
     private String size;
 
-    // Constructors
+    
     public CartItem() {}
 
     public CartItem(int productId, String productName, String imagePath, int quantity, double unitPrice, double discount) {
@@ -24,7 +24,7 @@ public class CartItem {
         this.totalPrice = (unitPrice - discount) * quantity;
     }
 
-    // Getters and Setters
+    
     public int getCartItemId() { return cartItemId; }
     public void setCartItemId(int cartItemId) { this.cartItemId = cartItemId; }
 
