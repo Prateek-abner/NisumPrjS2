@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Modern Header -->
         <header class="modern-header">
             <h1 class="brand-title">FashionHub - Search and Browse</h1>
             <div class="header-actions">
@@ -20,8 +19,6 @@
                 </a>
             </div>
         </header>
-
-        <!-- Search Section -->
         <section class="search-container">
             <form action="${pageContext.request.contextPath}/products/search" method="get" class="modern-search-form">
                 <div class="search-group">
@@ -39,7 +36,7 @@
             </form>
         </section>
 
-        <!-- Products Grid -->
+
         <section class="products-container">
             <div class="modern-products-grid">
                 <c:forEach items="${products}" var="product">
