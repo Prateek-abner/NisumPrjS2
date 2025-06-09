@@ -11,13 +11,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- Product Detail Header -->
         <header class="product-header">
             <h1 class="product-main-title">${product.productName}</h1>
             <p class="brand-subtitle">by FashionHub</p>
         </header>
 
-        <!-- Product Detail Content -->
         <main class="product-detail-container">
             <div class="product-detail-layout">
                 <!-- Product Image Section -->
@@ -30,7 +28,6 @@
                     </div>
                 </div>
 
-                <!-- Product Info Section -->
                 <div class="product-info-panel">
                     <!-- Pricing -->
                     <div class="price-container">
@@ -39,7 +36,6 @@
                         <span class="discount-percentage">(${product.discount}% OFF)</span>
                     </div>
 
-                    <!-- Offers Section -->
                     <div class="offers-container">
                         <h3 class="section-title">
                             <i class="fas fa-gift"></i> Available Offers
@@ -50,7 +46,6 @@
                         </div>
                     </div>
 
-                    <!-- Size Selection -->
                     <div class="size-container">
                         <h3 class="section-title">Size:</h3>
                         <div class="size-options">
@@ -60,7 +55,6 @@
                         </div>
                     </div>
 
-                    <!-- Quantity Selection -->
                     <div class="quantity-container">
                         <label class="section-title">Quantity:</label>
                         <div class="quantity-selector">
@@ -78,7 +72,6 @@
                         </p>
                     </div>
 
-                    <!-- Action Buttons -->
                     <div class="action-buttons-container">
                         <button class="add-to-cart-button" onclick="addToCart()">
                             <i class="fas fa-shopping-cart"></i>
@@ -90,7 +83,6 @@
                         </button>
                     </div>
 
-                    <!-- Back Link -->
                     <div class="back-link-container">
                         <a href="${pageContext.request.contextPath}/browse" class="back-link">
                             <i class="fas fa-arrow-left"></i>
@@ -98,7 +90,6 @@
                         </a>
                     </div>
 
-                    <!-- Message Container -->
                     <div id="cart-message" class="message-container" style="display: none;"></div>
                 </div>
             </div>
@@ -108,7 +99,6 @@
     <script>
         let selectedSize = 'M';
 
-        // Size selection functionality
         document.querySelectorAll('.size-button').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.size-button').forEach(b => b.classList.remove('active'));
@@ -117,7 +107,6 @@
             });
         });
 
-        // Quantity controls
         function changeQuantity(change) {
             const qtyInput = document.getElementById('quantity');
             let newQty = parseInt(qtyInput.value) + change;
@@ -126,7 +115,6 @@
             }
         }
 
-        // Add to cart function
         function addToCart() {
             const quantity = document.getElementById('quantity').value;
 
@@ -148,7 +136,6 @@
             });
         }
 
-        // Buy now function
         function buyNow() {
             addToCart();
             setTimeout(() => {
@@ -156,7 +143,6 @@
             }, 1000);
         }
 
-        // Show message function
         function showMessage(message, isSuccess) {
             const messageDiv = document.getElementById('cart-message');
             messageDiv.textContent = message;
