@@ -1,8 +1,8 @@
--- Create database
+
 CREATE DATABASE ecommerce_db;
 USE ecommerce_db;
 
--- CATEGORY TABLE
+
 CREATE TABLE Category (
     CategoryID INT PRIMARY KEY,
     CategoryName VARCHAR(100)
@@ -15,7 +15,7 @@ INSERT INTO Category (CategoryID, CategoryName) VALUES
 (104, 'Accessories'),
 (105, 'Footwear');
 
--- PRODUCT TABLE (with image path)
+
 CREATE TABLE Product (
     ProductID INT PRIMARY KEY,
     ProductName VARCHAR(100),
@@ -34,7 +34,7 @@ VALUES
 (3, 'Kids Winter Jacket', 103, 'Inactive', 'images/products/kids-winter-jacket.jpg', '2024-12-10 08:30:00', '2025-01-10 14:10:00'),
 (4, 'Mens Leather Jacket', 101, 'Active', 'images/products/mens-leather-jacket.jpg', '2024-12-10 08:45:00', '2025-01-10 15:10:00');
 
--- PRODUCT ATTRIBUTES
+
 CREATE TABLE ProductAttributes (
     AttributeID INT PRIMARY KEY,
     ProductID INT,
@@ -57,7 +57,6 @@ INSERT INTO ProductAttributes (AttributeID, ProductID, AttributeName, AttributeV
 (11, 4, 'Size', 'XL'),
 (12, 4, 'Season', 'Winter');
 
--- PRODUCT CATEGORY TABLE
 CREATE TABLE ProductCategory (
     CategoryID INT,
     ProductID INT,
@@ -76,7 +75,7 @@ INSERT INTO ProductCategory (CategoryID, ProductID, SKU, Price, Discount, Discou
 (103, 3, 'SKU-KWJ-003', 2499.99, 45, 1374.45),
 (101, 4, 'SKU-MLJ-004', 2499.00, 35, 1624.35);
 
--- USERS TABLE
+
 CREATE TABLE Users (
     UserID INT PRIMARY KEY,
     FirstName VARCHAR(50),
