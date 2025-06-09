@@ -31,7 +31,7 @@ INSERT INTO Product (ProductID, ProductName, CategoryID, Status, ImagePath, Crea
 VALUES
 (1, 'Men Cotton Shirt', 101, 'Active', 'images/men-cotton-shirt.jpg', '2025-01-15 10:00:00', '2025-03-20 12:30:00'),
 (2, 'Women Floral Dress', 102, 'Active', 'images/women-floral-dress.jpg', '2025-01-20 11:00:00', '2025-04-01 09:45:00'),
-(3, 'Kids Winter Jacket', 103, 'Inactive', 'images/kids-winter-jacket.jpg', '2024-12-10 08:30:00', '2025-01-10 14:10:00'),
+(3, 'Kids Winter Jacket', 103, 'Active', 'images/kids-winter-jacket.jpg', '2024-12-10 08:30:00', '2025-01-10 14:10:00'),
 (4, 'Mens Leather Jacket', 101, 'Active', 'images/mens-leather-jacket.jpg', '2024-12-10 08:45:00', '2025-01-10 15:10:00');
 
 
