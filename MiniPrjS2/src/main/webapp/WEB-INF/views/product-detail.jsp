@@ -29,7 +29,6 @@
                 </div>
 
                 <div class="product-info-panel">
-                    <!-- Pricing -->
                     <div class="price-container">
                         <span class="current-price-large">₹${product.discountPrice}</span>
                         <span class="original-price-large">₹${product.price}</span>
