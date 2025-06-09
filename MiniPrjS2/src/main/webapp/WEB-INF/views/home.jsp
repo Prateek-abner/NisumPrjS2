@@ -11,7 +11,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Header -->
     <nav class="main-navigation">
         <div class="nav-container">
             <div class="brand-logo">
@@ -35,7 +34,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
             <div class="hero-text">
@@ -60,7 +58,6 @@
         </div>
     </section>
 
-    <!-- Featured Products Section -->
     <section class="featured-products">
         <div class="container">
             <h2 class="section-title">Featured Products</h2>
@@ -97,7 +94,6 @@
     </section>
 
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -110,7 +106,6 @@
             });
         });
 
-        // Add loading animation to images
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('load', function() {
                 this.style.opacity = '1';
